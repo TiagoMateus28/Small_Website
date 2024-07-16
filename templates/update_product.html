@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Product</title>
+</head>
+<body>
+    <nav style= 'font-size: 20px;'> <!--Define uma barra de navegação para os links de navegação-->
+        <a href="/" style='padding-right: 10px;'>Home</a>
+        <a href="/listaroperacoes" style='padding-right: 10px;'>Operation List</a>
+        <a href="/add_product" style='padding-right: 10px;'>Add Products</a>
+        <a href="/remove_product" style='padding-right: 10px;'>Remove Products</a>
+        <a href="/updateproduct" style='padding-right: 10px;'>Update Products</a>
+    </nav>
+    <h1>Update Product</h1>
+    <form action="/products/updateproduct" method="POST"> <!-- Início de um formulário HTML que enviará os dados para a 
+        URL "/atualizarprodutos/save" usando o método HTTP POST -->
+        <div>
+            <h3>Required field!</h3>
+            <label for="updateProductId">Insert product id </label>
+            <input type="text" id="updateProductId" name="updateProductId" required>
+        </div>
+        <div>
+            <h3>Non mandatory fields.</h3>
+            <p>
+                <label for="">Name </label>
+                <input type="text" name="name">
+            </p>
+            <p>
+                <label for="">Price </label>
+                <input type="number" name="price">
+            </p>
+            <p>
+                <label for="">Model </label>
+                <input type="text" name="model">
+            </p>
+            <p>
+                <label for="">Brand </label>
+                <input type="text" name="brand">
+            </p>
+            <p>
+                <label for="">Pictures</label>
+                <input type="text" name="pictures" >
+            </p>
+            <div>           
+                <p><strong>Specs</strong></p>
+                <p>
+                    <label for="">Name </label>
+                    <input type="text" name="specs[namespecs]">
+                </p>
+                <p>
+                    <label for="">Value</label>
+                    <input type="number" name="specs[value]">
+                </p>
+                <p>
+                    <label for="">Option Description</label>
+                    <input type="text" name="specs[optionDescription]" >
+                </p>
+                <p>
+                    <label for="">Rating </label>
+                    <input type="number" name="rating" min="0" max="5">
+                </p>
+            </div>
+        </div>
+        <p>
+            <button type="submit">Update Product </button>
+        </p>
+    </form>
+   
+</body>
+</html>

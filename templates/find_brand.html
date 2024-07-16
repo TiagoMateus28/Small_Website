@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Product</title>
+</head>
+<body>
+    <nav style= 'font-size: 20px;'> <!--Define uma barra de navegação para os links de navegação-->
+        <a href="/" style='padding-right: 10px;'>Home</a>
+        <a href="/listaroperacoes" style='padding-right: 10px;'>Operation List</a>
+        <a href="/add_product" style='padding-right: 10px;'>Add Products</a>
+        <a href="/remove_product" style='padding-right: 10px;'>Remove Products</a>
+        <a href="/updateproduct" style='padding-right: 10px;'>Update Products</a>
+    </nav>
+    <h1>Search Product</h1>
+    <form action="/listaroperacoes/M6/result" method="POST">
+        <label for="findBrandM6">Brand:</label>
+        <input type="text" id="findBrandM6" name="findBrandM6" required>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
